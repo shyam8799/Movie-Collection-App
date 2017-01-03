@@ -1,0 +1,18 @@
+<div class="panel panel-default" ng-init="getMovies()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Movie Title</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+    	<div ng-repeat="movie in movies">
+    		<div class="col-md-6">
+               {{movie}}
+               <p>{{movie.description}}</p>
+    		</div>
+    		<div class="col-md-6">
+    			
+    		</div>
+    	</div>
+    </div>
+  </div>
+</div>

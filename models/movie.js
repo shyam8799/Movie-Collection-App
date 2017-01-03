@@ -1,21 +1,53 @@
-var mongoose = requires('mongoose');
+var mongoose = require('mongoose');
 
 //Genre schema
 
-var genreSchema = mongoose.schema({
-     name:{
+var movieSchema = mongoose.Schema({
+     title:{
      	type:String,
         required:true
      },
      create_date:{
      	type: Date,
-     	default: Dat.now
+     	default: Date.now
+     },
+     genre:{
+     	type:String,
+        required:true
+     },
+     director:{
+     	type:String,
+        required:true
+     },
+     producer:{
+     	type:String,
+        required:true
+     },
+     description:{
+     	type:String,
+        required:true
+     },
+     imdb:{
+     	type:String,
+        required:true
+     },
+     rotten_tomatoes:{
+     	type:String,
+        required:true
+     },
+     trailer:{
+     	type:String,
+        required:true
+     },
+     image:{
+     	type:String,
+        required:true
      }
 
 });
 
-var Genre = module.exports = mongoose.model('Genre',genreSchema);
+var Movie = module.exports = mongoose.model('Movie',movieSchema);
 
-module.exports.getGenres = function (callback, limit){
-	Genre.find(callback).limit(limit);
+module.exports.getMovies = function (callback, limit){
+	Movie.find(callback).limit(limit);
 }
