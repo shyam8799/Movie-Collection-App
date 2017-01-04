@@ -4,6 +4,7 @@ movieStore.controller('MoviesController', ['$scope', '$http', '$location','$rout
       $scope.getMovies = function(){
       	$http.get('/api/movies').then(function(response){
       		$scope.movies=response;
+      		console.log($scope.movies);
       	});
       }
 }]);

@@ -18,7 +18,7 @@ app.get('/',function(req,res){
     res.send('This is my app');
 });
 
-app.get ('/api/genres',function(req,res){
+/*app.get ('/api/genres',function(req,res){
 	Genre.getGenres(function(err,genres){
         if(err){
         	throw err;
@@ -26,7 +26,7 @@ app.get ('/api/genres',function(req,res){
         res.json(genres);
 
 	});
-});
+});*/
 app.get ('/api/movies',function(req,res){
 	Movie.getMovies(function(err,movies){
         if(err){
@@ -37,6 +37,17 @@ app.get ('/api/movies',function(req,res){
 	});
 
 });
+
+/*app.get('/api/movies', (req, res) => {
+	Movie.getMovies((err, books) => {
+		if(err){
+			throw err;
+		}
+		//console.log("I am out of client");
+		res.json(movie);
+
+	});
+});*/
 
 app.listen (3000);
 
